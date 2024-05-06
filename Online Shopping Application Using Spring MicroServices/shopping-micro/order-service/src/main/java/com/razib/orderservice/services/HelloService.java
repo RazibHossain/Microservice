@@ -9,10 +9,10 @@ import org.springframework.web.reactive.function.client.WebClient;
 //@RequiredArgsConstructor
 public class HelloService {
     @Autowired
-    private  WebClient webClient;
+    private  WebClient.Builder webClientBuilder;
     public Object communicateWithInventoryService() {
-        Object obj = webClient.get()
-                .uri("http://localhost:7777/api/inventoryService/hello?ajax")
+        Object obj = webClientBuilder.build().get()
+                .uri("http://inventory-service/api/inventoryService/hello?ajax")
                 .retrieve()
                 .bodyToMono(String.class)
                 .block();
