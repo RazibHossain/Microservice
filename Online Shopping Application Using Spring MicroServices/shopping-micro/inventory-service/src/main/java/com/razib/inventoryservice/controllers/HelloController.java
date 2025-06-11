@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 
     @RequestMapping(value = "/hello",method = RequestMethod.GET)
-    public Object hello(){
+    public Object hello() throws InterruptedException {
+
+        Thread.sleep(100000);
         return "hello inventory";
     }
 }
