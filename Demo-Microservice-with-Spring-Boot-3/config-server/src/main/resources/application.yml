@@ -5,5 +5,6 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/RazibHossain/Microservice/tree/a361354aeac7ed7ca465dee957b7dcb235355a25/Demo%20Microservice%20with%20Spring%20Boot%203/central%20configuration%20files
+          uri: https://github.com/RazibHossain/Microservice.git
+          search-paths: Demo-Microservice-with-Spring-Boot-3/central-configuration-files
           clone-on-start: true
