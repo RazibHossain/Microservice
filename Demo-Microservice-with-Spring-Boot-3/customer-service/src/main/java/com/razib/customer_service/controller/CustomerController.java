@@ -1,20 +1,14 @@
 package com.razib.customer_service.controller;
 
-
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-import java.util.Optional;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class CustomerController {
-	
 
-	
-	@GetMapping("/customers")
-	public Object fetchAllCustomers() {
-		return  "Hello";
-	}
-	
-
+    @RequestMapping(value = "/helloCustomer",method = RequestMethod.GET)
+    public String getCust(){
+        return "Hello Customer Service!";
+    }
 }
